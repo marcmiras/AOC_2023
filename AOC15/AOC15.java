@@ -1,4 +1,4 @@
-import java.util.List;
+package AOC15;
 
 public class AOC15 {
 
@@ -10,6 +10,7 @@ public class AOC15 {
 
         int total = hash.calculateHash(lines);
 
+        System.out.println();
         System.out.printf("Part 1: %d", total);
         System.out.println();
     }

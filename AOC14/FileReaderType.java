@@ -1,3 +1,5 @@
+package AOC14;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -5,18 +7,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class FileReader {
+public class FileReaderType {
 
-    public void readFile() throws IOException {
-        String exampleFile = "src/example.txt";
-        String inputFile = "src/input.txt";
+    public void readFile() {
+        //String exampleFile = "AOC14/example.txt";
+        String inputFile = "AOC14/input.txt";
 
         Path path = Paths.get(inputFile);
 
         try (BufferedReader reader = Files.newBufferedReader(path)){
             List<String>lines = Files.readAllLines(path);
-            int length = lines.get(0).length();
-
             tiltFile(lines);
 
         } catch (IOException e){
@@ -44,9 +44,9 @@ public class FileReader {
 
         char[][] matrix = convertToMatrix(lines, rows, cols);
 
-        int i = 0, j = 0;
+        int i, j;
 
-        boolean ongoing = true;
+        boolean ongoing;
 
         do {
             ongoing = false;
@@ -60,13 +60,6 @@ public class FileReader {
                 }
             }
         } while (ongoing);
-
-        for (i=0; i<rows; i++) {
-            for (j=0; j<cols; j++) {
-                System.out.printf("%c", matrix[i][j]);
-            }
-            System.out.println();
-        }
 
         int result = 0;
 

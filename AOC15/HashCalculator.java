@@ -1,9 +1,9 @@
-import java.util.List;
+package AOC15;
 
 public class HashCalculator {
 
     public int calculateHash(String[] input) {
-        int totalAsciiValue = 0;
+        int totalAsciiValue;
         int result = 0;
 
         for (String strs : input) {

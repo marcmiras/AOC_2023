@@ -10,7 +10,7 @@ public class FileParser {
 
     public List<String> readLines() {
         String filename = "AOC15/input.txt";
-        //String filename_example = "AOC15/example.txt.txt.txt";
+        //String filename_example = "AOC15/example.txt";
 
         List<String> charArrays = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))){

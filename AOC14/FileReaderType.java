@@ -10,7 +10,7 @@ import java.util.List;
 public class FileReaderType {
 
     public void readFile() {
-        //String exampleFile = "AOC14/example.txt.txt.txt";
+        //String exampleFile = "AOC14/example.txt";
         String inputFile = "AOC14/input.txt";
 
         Path path = Paths.get(inputFile);

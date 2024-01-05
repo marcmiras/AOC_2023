@@ -1,4 +1,4 @@
-with open("games.txt", "r", encoding="utf-8") as file:
+with open("input.txt", "r", encoding="utf-8") as file:
     games = [line.strip().split(':')[1] for line in file.readlines()]
 
 max_numbers = {"red": 12, "green": 13, "blue": 14}

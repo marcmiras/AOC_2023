@@ -95,7 +95,7 @@ public class AOC13 {
 
     public static void main(String[] args) {
         try {
-            List<List<String>> patterns = readInput("AOC13/patterns.txt");
+            List<List<String>> patterns = readInput("AOC13/input.txt");
 
             int part1 = 0;
             List<Integer> answers = new ArrayList<>();

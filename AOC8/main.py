@@ -62,12 +62,12 @@ def calculate_travel_steps(locs, dirs, mode):
         return math.lcm(*result)
 
 
-def part1():
-    return 0
+def part1(locations, directions):
+    return calculate_travel_steps(locations, directions, 1)
 
 
-def part2():
-    return 0
+def part2(locations, directions):
+    return calculate_travel_steps(locations, directions, 2)
 
 
 def main():
@@ -76,8 +76,8 @@ def main():
     locations = build_mapping(lines)
     directions = lines[0]
 
-    answer_part1 = calculate_travel_steps(locations, directions, 1)
-    answer_part2 = calculate_travel_steps(locations, directions, 2)
+    answer_part1 = part1(locations, directions)
+    answer_part2 = part2(locations, directions)
 
     print("Part 1:", answer_part1)
     print("Part 2:", answer_part2)
